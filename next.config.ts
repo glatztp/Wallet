@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true, // Ativa o modo estrito para ajudar no desenvolvimento
 
-const nextConfig: NextConfig = {
-  /* config options here */
+  // Outras configurações mínimas, apenas o necessário para o seu caso
 };
 
-export default nextConfig;
+module.exports = nextConfig;

@@ -1,103 +1,228 @@
-import Image from "next/image";
+import React from "react";
+import { Navbar } from "../components/navbar";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-[#2B2B2B]">
+      <Navbar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="flex items-center justify-between h-screen px-40">
+        <div className="flex flex-col justify-center w-1/2">
+          <h1 className="text-6xl font-semibold text-white mb-8">
+            Saas Landing
+          </h1>
+          <h1 className="text-6xl font-semibold text-white">Page Template</h1>
+          <div className="text-lg tracking-wider">
+            <p className="text-[#AFAFAF] mt-16">
+              This is a template Figma file, turned into code
+            </p>
+            <p className="text-[#AFAFAF] mb-16">
+              using Anima. Learn more at AnimaApp.com
+            </p>
+          </div>
+          <div className="ml-0">
+            <button className="bg-[#FFDF90] py-3 px-16 rounded-2xl hover:bg-[#FFDF80] transition-colors duration-100 mb-16">
+              Get Started
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div className="w-1/2 pl-16 pb-20">
+          <img
+            src="/Screenshot.svg"
+            className="w-full h-auto bg-[#333333] rounded-2xl"
+            alt="Screenshot"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </div>
+      </div>
+
+      <div className="w-full">
+        <img
+          src="/Logos.svg"
+          className="w-full h-auto bg-[#333333] rounded-t-2xl"
+          alt="Logos"
+        />
+      </div>
+
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="bg-white w-[900px] h-[510px] flex justify-center items-center rounded-3xl">
+          <img
+            src="/HomeScnd.svg"
+            className="h-full w-auto min-w-full min-h-full object-contain mt-24"
+            alt="Centralized Image"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center py-16">
+        <div className="w-full max-w-6xl px-8">
+          <ul className="flex space-x-12 justify-between items-center text-center">
+            <li className="flex flex-col items-center">
+              <img
+                src="/Cards.svg"
+                className="w-12 h-12 mb-4"
+                alt="Cards Icon"
+              />
+              <h3 className="text-xl font-semibold text-white mt-6">
+                Customizable Card
+              </h3>
+              <p className="text-[#AFAFAF] mt-6 opacity-60">
+                Customize your own card for your exact income and expense needs.
+              </p>
+            </li>
+
+            <li className="flex flex-col items-center">
+              <img src="/Coin.svg" className="w-12 h-12 mb-4" alt="Coin Icon" />
+              <h3 className="text-xl font-semibold text-white mt-6">
+                No Payment Fee
+              </h3>
+              <p className="text-[#AFAFAF] mt-6 opacity-60">
+                Transfer your payment all over the world with no payment fee.
+              </p>
+            </li>
+
+            <li className="flex flex-col items-center">
+              <img
+                src="/Purse.svg"
+                className="w-12 h-12 mb-4"
+                alt="Purse Icon"
+              />
+              <h3 className="text-xl font-semibold text-white mt-6">
+                All in One Place
+              </h3>
+              <p className="text-[#AFAFAF] mt-6 opacity-60">
+                The right place to keep your credit and debit cards, boarding
+                passes & more.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="bg-[#BFAFFA] w-[900px] h-[550px] flex flex-col justify-center items-center rounded-3xl">
+          <h1 className="text-3xl font-semibold text-[#2b2b2b] text-justify opacity-80 py-10 px-20 -mt-10">
+            “Wallet is a great product! All of my most important information is
+            there - credit cards, transit cards, boarding passes, tickets, and
+            more. And I don't need to worry because it's all in one place!
+            thanks!”
+          </h1>
+
+          <div className="flex items-center justify-start mt-6 p-4 rounded-lg w-full max-w-[900px]">
+            <div className="flex items-center justify-start pl-16">
+              <div className="w-20 h-20">
+                <img
+                  src="/Profile.svg"
+                  className="w-full h-auto rounded-full"
+                  alt="Profile Icon"
+                />
+              </div>
+
+              <div className="ml-6 flex flex-col justify-start">
+                <p className="text-[#2b2b2b] font-semibold">Johnny Owens</p>
+
+                <div className="flex mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="full"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="w-5 h-5 text-[#2B2B2B] opacity-70"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 17.27l6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03L12 17.27z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="full"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="w-5 h-5 text-[#2B2B2B] opacity-70"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 17.27l6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03L12 17.27z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="full"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="w-5 h-5 text-[#2B2B2B] opacity-70"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 17.27l6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03L12 17.27z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="full"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="w-5 h-5 text-[#2B2B2B] opacity-70"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 17.27l6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03L12 17.27z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="full"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="w-5 h-5 text-[#2b2b2b] opacity-70"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 17.27l6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03L12 17.27z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-between h-screen px-40">
+        <div className="flex flex-col justify-center w-1/2">
+          <h1 className="text-6xl font-semibold text-white mb-8">Questions?</h1>
+          <h1 className="text-6xl font-semibold text-white">Let's Talk</h1>
+          <div className="text-lg tracking-wider">
+            <p className="text-[#AFAFAF] mt-16">
+              Contact us through our 24/7 live chat.{" "}
+            </p>
+            <p className="text-[#AFAFAF] mb-16">We’re always happy to help!</p>
+          </div>
+          <div className="ml-0">
+            <button className="bg-[#FFDF90] py-3 px-16 rounded-2xl hover:bg-[#FFDF80] transition-colors duration-100 mb-16">
+              Get Started
+            </button>
+          </div>
+        </div>
+        <div className="w-1/2 pl-16 pb-20">
+          <img
+            src="/SecndScreen.svg"
+            className="w-full h-auto bg-[#333333] rounded-2xl"
+            alt="Screenshot"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
