@@ -12,8 +12,6 @@ const FeedbackPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Simulate form submission
     setIsSubmitted(true);
     setName("");
     setEmail("");
