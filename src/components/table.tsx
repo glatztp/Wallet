@@ -67,15 +67,12 @@ const Table: React.FC<TableProps> = ({ data, columns }) => {
           {currentRows.map((row, index) => (
             <tr key={index} className={index % 2 === 0 ? "bg-[#444444]" : "bg-[#333333]"}>
               {columns.map((col, idx) => {
-                let value = row[col];
+                const value = row[col];
                 let style = "";
 
-                if (col === "balance") {
-                  let numValue = typeof value === "number" ? value : parseFloat(value);
-                  if (!isNaN(numValue)) {
-                    style = numValue >= 0 ? "text-green-400" : "text-red-400";
-                  }
-                } else if (col === "currency") {
+                if (col === "balance" && typeof value === "number") {
+                  style = value >= 0 ? "text-green-400" : "text-red-400";
+                } else if (col === "currency" && typeof value === "string") {
                   style = currencyColors[value] || "";
                 }
 
