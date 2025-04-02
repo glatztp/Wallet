@@ -1,10 +1,8 @@
-// components/Navbar.tsx
 "use client";
 
 import Link from "next/link";
 import '../app/index.css';   
 import { SignOut } from "phosphor-react";
-import Loading from "./loading";
 
 
 export function Navbar() {

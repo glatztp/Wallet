@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Funnel } from "phosphor-react"; 
+import { Funnel } from "phosphor-react";
 
 type TableProps = {
-  data: any[];
+  data: any[];  // Idealmente, substitua 'any' por tipos mais específicos.
   columns: string[];
 };
 
@@ -36,14 +36,15 @@ const Table: React.FC<TableProps> = ({ data, columns }) => {
 
   // Modificado: Nomes de moedas com cores
   const renderCurrency = (currency: string) => {
-    if (currency === 'USD') {
-      return <span className="text-green-500 font-semibold">{currency}</span>;
-    } else if (currency === 'EUR') {
-      return <span className="text-blue-500 font-semibold">{currency}</span>;
-    } else if (currency === 'BTC') {
-      return <span className="text-orange-500 font-semibold">{currency}</span>;
-    } else {
-      return <span className="text-white font-semibold">{currency}</span>;
+    switch (currency) {
+      case 'USD':
+        return <span className="text-green-500 font-semibold">{currency}</span>;
+      case 'EUR':
+        return <span className="text-blue-500 font-semibold">{currency}</span>;
+      case 'BTC':
+        return <span className="text-orange-500 font-semibold">{currency}</span>;
+      default:
+        return <span className="text-white font-semibold">{currency}</span>;
     }
   };
 
