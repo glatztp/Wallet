@@ -3,13 +3,20 @@
 import React, { useState, useEffect } from "react";
 import { Funnel } from "phosphor-react";
 
+// Definindo um tipo para os dados de cada item
+type WalletData = {
+  walletName: string;
+  balance: number;
+  currency: string;
+};
+
 type TableProps = {
-  data: any[];  // Idealmente, substitua 'any' por tipos mais específicos.
+  data: WalletData[];  // Usando o tipo WalletData
   columns: string[];
 };
 
 const Table: React.FC<TableProps> = ({ data, columns }) => {
-  const [filteredData, setFilteredData] = useState(data);
+  const [filteredData, setFilteredData] = useState<WalletData[]>(data);  // Usando o tipo WalletData
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 5;
