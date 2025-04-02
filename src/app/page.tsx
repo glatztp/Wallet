@@ -1,9 +1,32 @@
+"use client";
+
 import React from "react";
+import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import Image from "next/image"; 
+import { useEffect } from "react";
+import Image from "next/image";
+import { useState } from "react";
+import Loading from "@/components/loading";
+import Link from "next/link";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+
+    if (!token) {
+      router.push("/login");
+      setLoading(false);
+    } else {
+      setLoading(false);
+    }
+  }, [router]);
+
+  if (loading) return <Loading />;
+
   return (
     <div className="bg-[#2B2B2B]">
       <Navbar />
@@ -23,9 +46,11 @@ export default function Home() {
             </p>
           </div>
           <div className="ml-0">
-            <button className="bg-[#FFDF90] py-3 px-16 rounded-2xl hover:bg-[#FFDF80] transition-colors duration-100 mb-16">
-              Get Started
-            </button>
+            <Link href="/table">
+              <button className="bg-[#FFDF90] py-3 px-16 rounded-2xl hover:bg-[#ffd876] transition-colors duration-300 mb-16">
+                See Values
+              </button>
+            </Link>
           </div>
         </div>
         <div className="w-1/2 pl-16 pb-20">
@@ -119,7 +144,10 @@ export default function Home() {
       <div className="flex justify-center items-center min-h-screen">
         <div className="bg-[#BFAFFA] w-[900px] h-[550px] flex flex-col justify-center items-center rounded-3xl">
           <h1 className="text-3xl font-semibold text-[#2b2b2b] text-justify opacity-80 py-10 px-20 -mt-10">
-            “Wallet is a great product! All of my most important information is there - credit cards, transit cards, boarding passes, tickets, and more. And I don&apos;t need to worry because it&apos;s all in one place! thanks!”
+            “Wallet is a great product! All of my most important information is
+            there - credit cards, transit cards, boarding passes, tickets, and
+            more. And I don&apos;t need to worry because it&apos;s all in one
+            place! thanks!”
           </h1>
 
           <div className="flex items-center justify-start mt-6 p-4 rounded-lg w-full max-w-[900px]">
@@ -136,23 +164,7 @@ export default function Home() {
 
               <div className="ml-6 flex flex-col justify-start">
                 <p className="text-[#2b2b2b] font-semibold">Johnny Owens</p>
-
-                <div className="flex mt-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="full"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="w-5 h-5 text-[#2B2B2B] opacity-70"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 17.27l6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03L12 17.27z"
-                    />
-                  </svg>
-                </div>
+                <p className="text-[#2b2b2b] ">CTO - Google Entreprises</p>
               </div>
             </div>
           </div>
@@ -167,12 +179,16 @@ export default function Home() {
             <p className="text-[#AFAFAF] mt-16">
               Contact us through our 24/7 live chat.{" "}
             </p>
-            <p className="text-[#AFAFAF] mb-16">We&apos;re always happy to help!</p>
+            <p className="text-[#AFAFAF] mb-16">
+              We&apos;re always happy to help!
+            </p>
           </div>
           <div className="ml-0">
-            <button className="bg-[#FFDF90] py-3 px-16 rounded-2xl hover:bg-[#FFDF80] transition-colors duration-100 mb-16">
-              Get Started
-            </button>
+            <Link href="/feedback">
+              <button className="bg-[#FFDF90] py-3 px-16 rounded-2xl hover:bg-[#ffd876] transition-colors duration-300 mb-16">
+                Give Feedback
+              </button>
+            </Link>
           </div>
         </div>
         <div className="w-1/2 pl-16 pb-20">

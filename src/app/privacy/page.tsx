@@ -6,7 +6,7 @@ export default function Privacy() {
     <div className="bg-[#2B2B2B]">
       <Navbar />
       <div className="min-h-[88.2vh] flex justify-center items-center px-56">
-        <div className="bg-[#333333] p-8 rounded-lg w-auto min-w-lg max-h-[80vh] overflow-y-auto">
+        <div className="bg-[#333333] p-8 rounded-lg w-auto min-w-lg max-h-[vh] overflow-y-auto">
           <div className="text-white text-2xl mb-4 font-semibold">Privacy Policy</div>
 
           <div className="space-y-5">

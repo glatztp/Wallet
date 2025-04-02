@@ -2,7 +2,7 @@
 
 import { NavbarC } from "@/components/navbarclean";
 import Toast from "@/components/toast";
-import { useState} from "react";
+import { useState } from "react";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -108,7 +108,7 @@ export default function SignUp() {
             <div>
               <button
                 type="submit"
-                className="bg-[#BFAFF2] text-gray py-2 px-8 rounded-lg hover:bg-[#c9bcf4] w-full mt-4"
+                className="bg-[#BFAFF2] text-gray py-2 px-8 rounded-lg hover:bg-[#b29cfb] w-full mt-4"
               >
                 Sign Up
               </button>

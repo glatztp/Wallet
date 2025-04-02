@@ -4,7 +4,6 @@ import { Navbar } from "@/components/navbar";
 import Toast from "@/components/toast";
 
 export default function Cookies() {
-
   const [showToast, setShowToast] = useState(false);
   const handleAcceptCookies = () => {
     setShowToast(true);
@@ -28,7 +27,7 @@ export default function Cookies() {
           </p>
           <div className="flex mt-4 items-center justify-center">
             <button
-              className="bg-[#BFAFF2] text-gray py-2 px-8 rounded-lg hover:bg-[#c9bcf4] w-50"
+              className="bg-[#BFAFF2] text-gray py-2 px-8 rounded-lg hover:bg-[#b29cfb] w-50"
               onClick={handleAcceptCookies}
             >
               Accept Cookies
@@ -36,7 +35,12 @@ export default function Cookies() {
           </div>
         </div>
       </div>
-      {showToast && <Toast message="Cookies accepted!" onClose={() => setShowToast(false)} />}
+      {showToast && (
+        <Toast
+          message="Cookies accepted!"
+          onClose={() => setShowToast(false)}
+        />
+      )}
     </div>
   );
 }

@@ -13,7 +13,7 @@ export function Footer() {
         <div className="flex justify-between items-center mt-12">
           <ul className="flex  font-semibold text-lg">
             <li className="text-white ">
-              <Link href="#">©  Wallet 2022</Link>
+              <Link href="#">© Wallet 2022</Link>
             </li>
             <li className="text-white px-8">
               <Link href="/privacy">Privacy Policy</Link>
@@ -31,7 +31,7 @@ export function Footer() {
               className="mr-2 bg-[#535353] border border-[#535353] rounded-2xl px-6 py-3 opacity-50 text-white text-start"
               placeholder="Enter your email"
             />
-            <button className="bg-[#BFAFF2] text-gray px-6 py-3 rounded-2xl hover:bg-[#c9bcf4] transition-colors duration-200">
+            <button className="bg-[#BFAFF2] text-gray px-6 py-3 rounded-2xl hover:bg-[#b29cfb]:bg-[#c9bcf4] transition-colors duration-200">
               Send
             </button>
           </div>
