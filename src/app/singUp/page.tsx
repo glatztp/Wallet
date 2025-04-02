@@ -2,7 +2,7 @@
 
 import { NavbarC } from "@/components/navbarclean";
 import Toast from "@/components/toast";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
