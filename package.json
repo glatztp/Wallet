@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.6.0",
-    "next": "15.2.8",
+    "next": "15.2.9",
     "phosphor-react": "^1.4.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
@@ -22,9 +22,9 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.0.0",
+    "eslint": "^9.26.0",
     "eslint-config-next": "15.2.4",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.10",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.0.0"
   }
